@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRAMIX · Nueva operación</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="barra-superior" id="barra-superior"></header>
+
+  <div class="contenedor">
+    <nav class="menu-lateral" id="menu-lateral"></nav>
+
+    <main class="contenido">
+      <h2>Registrar operación de importación</h2>
+      <p class="subtitulo">Los campos marcados con <span style="color:#c41230">*</span> son obligatorios.</p>
+
+      <div id="aviso" class="aviso oculto"></div>
+
+      <section class="tarjeta">
+        <!-- Formulario funcional con validaciones (RF03 y RF04) -->
+        <form id="formulario-operacion" novalidate>
+          <div class="fila">
+            <div class="campo" id="campo-numero">
+              <label for="numero">N° de operación <span class="obligatorio">*</span></label>
+              <input type="text" id="numero">
+              <span class="error" id="error-numero"></span>
+            </div>
+
+            <div class="campo" id="campo-importador">
+              <label for="importador">Importador <span class="obligatorio">*</span></label>
+              <select id="importador"></select>
+              <span class="error" id="error-importador"></span>
+            </div>
+          </div>
+
+          <div class="fila">
+            <div class="campo" id="campo-proveedor">
+              <label for="proveedor">Proveedor / Exportador <span class="obligatorio">*</span></label>
+              <input type="text" id="proveedor" placeholder="Razón social del exportador">
+              <span class="error" id="error-proveedor"></span>
+            </div>
+
+            <div class="campo" id="campo-pais">
+              <label for="pais">País de origen <span class="obligatorio">*</span></label>
+              <input type="text" id="pais" placeholder="Ej.: Brasil">
+              <span class="error" id="error-pais"></span>
+            </div>
+          </div>
+
+          <div class="fila">
+            <div class="campo" id="campo-transporte">
+              <label for="transporte">Medio de transporte <span class="obligatorio">*</span></label>
+              <select id="transporte"></select>
+              <span class="error" id="error-transporte"></span>
+            </div>
+
+            <div class="campo" id="campo-arribo">
+              <label for="arribo">Fecha estimada de arribo <span class="obligatorio">*</span></label>
+              <input type="date" id="arribo">
+              <span class="error" id="error-arribo"></span>
+            </div>
+          </div>
+
+          <div class="campo completo" id="campo-descripcion">
+            <label for="descripcion">Descripción de la mercadería <span class="obligatorio">*</span></label>
+            <textarea id="descripcion" rows="2" placeholder="Detalle de la mercadería, cantidad y tipo de bulto"></textarea>
+            <span class="error" id="error-descripcion"></span>
+          </div>
+
+          <!-- Se actualiza al cambiar el medio de transporte -->
+          <div class="aviso informacion" id="vista-checklist"></div>
+
+          <div class="acciones">
+            <a class="boton secundario" href="operaciones.html">Cancelar</a>
+            <button type="submit" class="boton primario">GUARDAR</button>
+          </div>
+        </form>
+      </section>
+
+      <div class="pie-demo" id="pie-demo"></div>
+    </main>
+  </div>
+
+  <script src="js/datos.js"></script>
+  <script src="js/almacenamiento.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/comunes.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/nueva-operacion.js"></script>
+</body>
+</html>

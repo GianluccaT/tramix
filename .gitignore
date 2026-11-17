@@ -1,0 +1,8 @@
+# dependencias instaladas
+node_modules/
+
+# variables con contraseñas, nunca se suben
+.env
+
+# basura del sistema
+.DS_Store

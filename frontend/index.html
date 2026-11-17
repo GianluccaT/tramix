@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRAMIX · Inicio de sesión</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="login-fondo">
+
+  <div class="login-caja">
+    <div class="login-cabecera">
+      <h1>TRAMIX</h1>
+      <p>Seguimiento documental de importaciones</p>
+    </div>
+
+    <div class="login-cuerpo">
+      <div id="aviso" class="aviso oculto"></div>
+
+      <!-- Formulario de acceso (RF01) -->
+      <form id="formulario-login" novalidate>
+        <div class="campo" id="campo-email">
+          <label for="email">Usuario</label>
+          <input type="email" id="email" placeholder="usuario@empresa.com.py" autocomplete="username">
+          <span class="error" id="error-email"></span>
+        </div>
+
+        <div class="campo" id="campo-clave">
+          <label for="clave">Contraseña</label>
+          <input type="password" id="clave" placeholder="••••••••" autocomplete="current-password">
+          <span class="error" id="error-clave"></span>
+        </div>
+
+        <button type="submit" class="boton primario ancho">INGRESAR</button>
+      </form>
+
+      <div class="login-ayuda">
+        Usuarios de demostración (clave <b>tramix123</b>):<br>
+        <b>jgimenez@tramix.com.py</b> — despachante<br>
+        <b>compras@agroinsumos.com.py</b> — importador<br>
+        <b>admin@tramix.com.py</b> — administrador
+      </div>
+    </div>
+  </div>
+
+  <script src="js/datos.js"></script>
+  <script src="js/almacenamiento.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/comunes.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

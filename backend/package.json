@@ -1,0 +1,20 @@
+{
+  "name": "tramix-backend",
+  "version": "1.0.0",
+  "description": "Backend de TRAMIX: API REST y servidor del frontend",
+  "main": "servidor.js",
+  "scripts": {
+    "start": "node servidor.js",
+    "db:init": "node scripts/crear-base.js"
+  },
+  "author": "Gianlucca Torreani, Yevgeni Butlerov",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "mysql2": "^3.24.6"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

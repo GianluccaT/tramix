@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRAMIX · Detalle de operación</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="barra-superior" id="barra-superior"></header>
+
+  <div class="contenedor">
+    <nav class="menu-lateral" id="menu-lateral"></nav>
+
+    <main class="contenido">
+      <div id="aviso" class="aviso oculto"></div>
+
+      <section class="tarjeta">
+        <div class="cabecera-operacion" id="cabecera"></div>
+        <div class="linea-etapas" id="linea-etapas"></div>
+      </section>
+
+      <div class="columnas">
+        <div class="principal">
+          <section class="tarjeta">
+            <h3 id="titulo-checklist">Checklist documental</h3>
+            <table class="datos">
+              <thead>
+                <tr>
+                  <th>Documento</th>
+                  <th>Archivo</th>
+                  <th>Estado</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="cuerpo-checklist"></tbody>
+            </table>
+            <div class="avance" id="avance"></div>
+          </section>
+
+          <section class="tarjeta" id="caja-etapa">
+            <h3>Cambiar etapa de la operación</h3>
+            <div class="fila">
+              <div class="campo">
+                <label for="nueva-etapa">Nueva etapa</label>
+                <select id="nueva-etapa"></select>
+              </div>
+              <div class="campo" style="display:flex; align-items:flex-end">
+                <button type="button" class="boton primario" id="boton-etapa">Actualizar etapa</button>
+              </div>
+            </div>
+            <p class="nota">La etapa «Doc. completa» solo puede aplicarse cuando todos los documentos del checklist figuran como recibidos.</p>
+          </section>
+        </div>
+
+        <div class="lateral">
+          <section class="tarjeta">
+            <h3>Historial de movimientos</h3>
+            <ul class="historial" id="historial"></ul>
+          </section>
+        </div>
+      </div>
+
+      <!-- Campo oculto utilizado para simular la carga de archivos -->
+      <input type="file" id="selector-archivo" accept=".pdf,.jpg,.jpeg,.png" style="display:none">
+
+      <div class="pie-demo" id="pie-demo"></div>
+    </main>
+  </div>
+
+  <script src="js/datos.js"></script>
+  <script src="js/almacenamiento.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/comunes.js"></script>
+  <script src="js/detalle.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRAMIX · Panel principal</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="barra-superior" id="barra-superior"></header>
+
+  <div class="contenedor">
+    <nav class="menu-lateral" id="menu-lateral"></nav>
+
+    <main class="contenido">
+      <h2>Panel principal</h2>
+      <p class="subtitulo" id="subtitulo"></p>
+
+      <!-- Indicadores por etapa (RF08) -->
+      <section class="indicadores" id="indicadores"></section>
+
+      <section class="tarjeta">
+        <h3>Últimas operaciones</h3>
+        <table class="datos">
+          <thead>
+            <tr>
+              <th>N° operación</th>
+              <th>Importador</th>
+              <th>Transporte</th>
+              <th>Arribo</th>
+              <th>Docs.</th>
+              <th>Etapa</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpo-tabla"></tbody>
+        </table>
+      </section>
+
+      <div class="pie-demo" id="pie-demo"></div>
+    </main>
+  </div>
+
+  <script src="js/datos.js"></script>
+  <script src="js/almacenamiento.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/comunes.js"></script>
+  <script src="js/panel.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+# Configuración del servicio en Render (se puede crear a mano igual, con estos mismos datos)
+services:
+  - type: web
+    name: tramix
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      # los valores se cargan en el panel de Render, acá solo van los nombres
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_SSL
+        sync: false

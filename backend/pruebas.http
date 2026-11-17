@@ -1,0 +1,48 @@
+# Pruebas de los endpoints (extensión REST Client de VS Code)
+# En local: levantar el servidor con npm start
+# Para probar el despliegue, cambiar la línea de abajo por la URL de Render
+@base = http://localhost:3000
+
+### GET - listado de operaciones (tiene que dar 200)
+GET {{base}}/api/operaciones
+
+
+### POST - operación nueva (tiene que dar 201)
+POST {{base}}/api/operaciones
+Content-Type: application/json
+
+{
+  "numero": "IMP-2026-042",
+  "importadorId": "IMP02",
+  "proveedor": "Shandong Machinery Co. Ltd.",
+  "paisOrigen": "China",
+  "transporte": "maritimo",
+  "fechaArribo": "2026-12-05",
+  "descripcion": "Repuestos para maquinaria agrícola."
+}
+
+
+### POST con datos incompletos (tiene que dar 400)
+POST {{base}}/api/operaciones
+Content-Type: application/json
+
+{
+  "numero": "IMP-2026-043",
+  "importadorId": "IMP04",
+  "transporte": "aereo"
+}
+
+
+### POST con un número que ya existe (tiene que dar 409)
+POST {{base}}/api/operaciones
+Content-Type: application/json
+
+{
+  "numero": "IMP-2026-041",
+  "importadorId": "IMP01",
+  "proveedor": "Ningbo Tools Co. Ltd.",
+  "paisOrigen": "China",
+  "transporte": "maritimo",
+  "fechaArribo": "2026-12-20",
+  "descripcion": "Herramientas manuales."
+}
