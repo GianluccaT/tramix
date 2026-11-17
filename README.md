@@ -17,7 +17,7 @@ checklist documental (que se arma solo según el medio de transporte) y su etapa
 | Entorno | Aplicación | API |
 |---|---|---|
 | Local | http://localhost:3000 | http://localhost:3000/api/operaciones |
-| Desplegado (Render) | **PEGAR ACÁ LA URL DE RENDER** | **misma URL** + `/api/operaciones` |
+| Desplegado (Render) | https://tramix.onrender.com | https://tramix.onrender.com/api/operaciones |
 
 Usuarios de demostración (ficticios, para probar): `jgimenez@tramix.com.py` (despachante),
 `compras@agroinsumos.com.py` (importador) y `admin@tramix.com.py` (administrador). Clave: `tramix123`.
